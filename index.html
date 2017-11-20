@@ -12,20 +12,33 @@
     <h2 id="hotelName"></h2>
     
     <form id="reservationForm">
+        
         <div id="radialSection">
-            <label>Room Type</label><br>
+            <div id="radioSection">
+                <label>Room Type</label><br>
+                <!-- <input type="radio" value="test">
+                <label id="label">test</label>-->
+            </div>
+            
         </div>
+        
         <div id="roomInfo">
             <h2>Room Info</h2>
             <p>Available: <span id="available" ></span></p>
             <p>Price: <span id="price"></span></p>
         </div>
+        
         <div id="confirmationSection">
+            
             <input type="checkbox" name="confirm" id="confirmation"><label>I agree to Terms and Conditions</label>
         </div>
+        
         <br>
+        
         <button type="submit">Submit</button>
+        
     </form>
+    
     <script src="scripts/index.js"></script>
 </body>
 </html>
