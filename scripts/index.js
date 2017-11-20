@@ -20,8 +20,18 @@ var hotel = {
     name: "CareerDevs Innt"
 }
 
-//console.log(document.createElement("radio").nodeName);
+// display the price and number of available rooms----------------------------->
 
+function displayDetail(room) {
+    console.log("hello");
+    console.log(room);
+    document.getElementById("price").innerHTML = hotel.rooms[room].price;
+    document.getElementById("available").innerHTML = hotel.rooms[room].available;
+}
+
+// display rooms as radio option------------------------------------------------>
+
+//console.log(document.createElement("radio").nodeName);
 for (var i = 0; i < hotel.rooms.length; i++){
         console.log("start");
     var radioBtn = document.createElement("INPUT");
@@ -30,11 +40,14 @@ for (var i = 0; i < hotel.rooms.length; i++){
     radioBtn.setAttribute("name", "rooms"); // in var hotel
     radioBtn.setAttribute("value", i); // i = room [{--},{--},{--}]
     radioBtn.setAttribute("id", "room" + i); // room + 1, 2, 3
+    radioBtn.setAttribute("onclick", "displayDetail(" + i + ")"); // short way `displayDetail(${i})`
     radioLbl.innerHTML = hotel.rooms[i].name; // var hotel->rooms:->[--]->name of bed type
         console.log("stop");
         
     document.getElementById("radioSection").appendChild(radioBtn); // button appears
     document.getElementById("radioSection").appendChild(radioLbl); // name of bed type appears
 }
-// display rooms as radio option
+
+//validate and reserve with a placeholder name --------------------------------->
+
 
